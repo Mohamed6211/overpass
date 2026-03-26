@@ -38,7 +38,9 @@ async function queryOverpass(query, retries = 4) {
     }
   }
 }
-
+app.get("/", (req, res) => {
+  res.send("Overpass proxy is running");
+});
 app.post("/overpass", async (req, res) => {
   const { query } = req.body;
 
