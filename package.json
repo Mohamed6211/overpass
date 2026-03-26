@@ -1,7 +1,7 @@
 {
   "name": "overpass-proxy",
   "version": "1.0.0",
-  "description": "Overpass API proxy with retry logic",
+  "description": "Overpass API proxy with retry logic and CORS",
   "main": "server.js",
   "type": "commonjs",
   "scripts": {
@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "express": "^4.18.2",
-    "node-fetch": "^2.6.7"
+    "node-fetch": "^2.6.7",
+    "cors": "^2.8.5"
   }
 }
