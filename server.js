@@ -1,8 +1,17 @@
 const express = require("express");
-const fetch = require("node-fetch");
+const cors = require("cors"); // <- import cors
+const fetch = require("node-fetch"); // or built-in fetch in Node 18+
 
 const app = express();
+
+// Allow all origins (for testing)
+app.use(cors());
+
+// Or allow only your frontend
+// app.use(cors({ origin: "http://localhost:8080" }));
+
 app.use(express.json());
+
 
 const PORT = process.env.PORT || 3000;
 
